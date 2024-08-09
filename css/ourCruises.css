@@ -1,0 +1,178 @@
+.image-container {
+    margin-left: 0;
+    padding: 20px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.MSC-Ships {
+    width: 700px;
+    border: 10px;
+}
+
+.ship-names {
+    font-size: 40px;
+    text-align: center;
+    overflow: hidden;
+    border-right: 5px solid;
+    white-space: nowrap;
+    margin: 5 auto;
+    animation:
+        typing 5.5s steps(40, end),
+        blink-caret .75s;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+.ship-details {
+    width: 400px;
+    text-align: center;
+}
+
+/*
+.ship-details button {
+    cursor: pointer;
+    background-color: rgba(6, 48, 110, 0.755);
+    font-style: italic;
+    color: white;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 50px;
+}
+*/
+.btn {
+    padding: 15px 30px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn-book {
+    background-color: rgba(6, 48, 110, 0.755);
+}
+
+.btn-book:hover {
+    background-color: #27ae60;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: darkslateblue;
+}
+
+video {
+    border-radius: 50px;
+}
+
+@media screen and (max-width:1100px){
+    .image-container{
+        scale: 0.9;
+    }
+}
+
+@media screen and (max-width:1049px){
+    .image-container{
+        scale: 0.85;
+    }
+}
+
+@media screen and (max-width:980px){
+    .image-container{
+        scale: 0.8;
+    }
+}
+
+@media screen and (max-width:950px){
+    .image-container{
+        scale: 0.75;
+    }
+}
+@media screen and (max-width:930px){
+    .image-container{
+        position: relative;
+        right: 100px;
+    }
+}
+
+@media screen and (max-width:870px){
+    /* .image-container{
+        position: relative;
+        right: 100px;
+    } */
+     .image-container video{
+        width: 600px;
+        left: 100px;
+     }
+}
+
+@media screen and (max-width:740px){
+    /* .image-container{
+        position: relative;
+        right: 100px;
+    } */
+     .image-container video{
+        width: 500px;
+        
+     }
+}
+@media screen and (max-width:640px){
+    /* .image-container{
+        position: relative;
+        right: 100px;
+    } */
+     .image-container video{
+        width: 450px;
+        
+     }
+}
+
+@media screen and (max-width:590px){
+    /* .image-container{
+        position: relative;
+        right: 100px;
+    } */
+     .image-container video{
+        width: 400px;
+        
+     }
+}
+
+@media screen and (max-width:570px){
+    /* .image-container{
+        position: relative;
+        right: 100px;
+    } */
+     .image-container video{
+        width: 400px;
+        
+     }
+     .ship-details{
+        scale: 0.7;
+     }
+}

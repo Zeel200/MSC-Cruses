@@ -1,0 +1,52 @@
+body {
+    background-color: antiquewhite;
+}
+
+.notice p {
+    margin-top: 20%;
+    text-align: center;
+    font-size: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-style: italic;
+}
+
+.btn {
+    /* margin-left: 580px; */
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    border-width: 2px;
+    border-radius: 10px;
+    margin-top: 30px;
+    color: antiquewhite;
+    background-color: rgba(6, 48, 110, 0.755);
+    font-style: italic;
+}
+
+.btn:hover {
+    background-color: darkslateblue;
+}
+
+.btnDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+    .notice p {
+        font-size: 24px;
+    }
+
+    h1{
+        font-size: 22px;
+    }
+
+}

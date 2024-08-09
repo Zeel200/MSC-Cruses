@@ -1,0 +1,153 @@
+
+.navbarSec {
+    display: block;
+}
+
+.header {
+    width: 100%;
+    background-color: rgb(2, 2, 38);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+
+.navItems ul {
+    display: flex;
+}
+
+.navItems ul li {
+    list-style: none;
+    margin-left: 50px;
+}
+
+.navItems ul li a {
+    font-family: arial;
+    color: aliceblue;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+}  
+
+.menuBtn {
+    background-color: rgb(2, 2, 38);
+    border: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    display: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.menuBtn:hover {
+    background-color: #fefefe1f;
+
+}
+.menuBtn:active{
+    transform: translateY(3px);
+}
+
+.logo img {
+    height: 80px;
+}
+
+.navItems ul {
+    display: flex;
+}
+
+.navItems ul li {
+    list-style: none;
+    margin-left: 50px;
+}
+
+.navItems ul li a {
+    font-family: arial;
+    color: aliceblue;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+}
+
+
+
+.navItems ul li a:not(.phone-number):after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 4px;
+    background-color: #FEFEFE;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+}
+
+.navItems ul a:not(.phone-number):hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+
+@media screen and (max-width: 955px) {
+    .header {
+        display: block;
+    }
+
+    .navItems ul {
+        display: block;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .menuBtn{
+        display: unset;
+    }
+
+    .navItems{
+        display: flex;
+        height: 0;
+        overflow: hidden;
+        justify-content: center;
+    }
+    .navItems ul li{
+        margin-bottom: 20px;
+    }
+    
+}
+
+
+
+
+.animationClass1{
+    animation: abc1 .5s ease;
+}
+
+@keyframes abc1{
+    from{
+        height: 220px;
+    }to{
+        height: 0;
+       
+    }
+
+}
+
+.animationClass2{
+    animation: abc2 .5s ease;
+}
+
+@keyframes abc2{
+    from{
+        height: 0;
+    }to{
+        height: 220px;
+       
+    }
+
+}
+
+

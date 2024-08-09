@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+}
+
+
+
+#ship {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    display: block;
+    position: relative;
+    margin: 30px auto;
+    z-index: -1;
+    opacity: 0.4;
+}
+/*
+.input {
+    width: 20%;
+    height: 20px;
+    padding: 0;
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+
+.input ul {
+    list-style-type: none;
+}
+
+.input,
+label li {
+    position: fixed;
+    flex-shrink: 0;
+    margin-left: 40%;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+#BNumber, #UserLastName{
+    width: 300px;
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/*
+#proceedBtn{
+    width: 100px;
+    height: 25px;
+    background-color: aquamarine;
+    cursor: pointer;
+    font-size: medium;
+    margin-top: 15px;
+    margin-left: 100px;
+}
+
+
+.logo{
+    flex: 1;
+}
+.logo img{
+    height: 60px;
+    background-color: aliceblue;
+}
+nav{
+    flex: 2;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    margin-left: 20px;
+}
+nav ul li a{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    padding: 20 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-right: 50px;
+}
+video{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+}
+#ship{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    display: block;
+    position: relative;
+    margin: 30px auto;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/*Manage Booking Styling*/
+/*
+.input{
+    width: 20%;
+    height: 20px;
+    padding: 0;
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+.input ul{
+    list-style-type: none;
+}
+.input, label li{
+    position: fixed;
+    flex-shrink: 0;
+    margin-left: 40%;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#BNumber, #UserLastName{
+    width: 300px;
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#proceedBtn{
+    width: 100px;
+    height: 25px;
+    background-color: aquamarine;
+    cursor: pointer;
+    font-size: medium;
+    margin-top: 15px;
+    margin-left: 100px;
+}
+*/
+/* Our Cruises Page Styling */
+/*
+.image-container{
+    margin-left: 0;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.MSC-Ships{
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin-top: 10px;
+}
+
+.image-container p{
+    display: flex;
+}
+.names{
+    display: flex;
+}
+*/
+/* Cruise Deals Page Styling */
+/*
+.image-container{
+    display: flex;
+}
+.image-details{
+    font-size: 20px;
+}
+.image-styler{
+    display: block;
+    align-items: center;
+}
+
+.img-container{
+    margin-left: 0;
+    padding: 20px;
+    margin-top: 30px;
+}
+.img-styler img{
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+.img-details p{
+    font-size: 20px;
+    display: flex;
+}
+.details p{
+    margin-left: 50px;
+    font-size: 20px;
+}
+.viewdatesBTN{
+    cursor: pointer;
+    font-size: 10px;
+    background-color: blanchedalmond;
+    border-radius: 15px;
+}
+*/
+/* Footer */
+.rights {
+    position: sticky;
+    bottom: 100px;
+    width: 100%;
+    text-align: center;
+    color: gray;
+    padding: 10px 0;
+    background-color: rgb(23, 21, 40);
+    /* margin-bottom: 50px; */
+}
