@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        img {
+            position: relative;
+
+        }
+
+        .divWithImage {
+            border: 2px solid red;
+            width: fit-content;
+        }
+
+        .animatedClass1 {
+            animation: leftMovingImage 1.5s forwards ease-out;
+        }
+
+        .animatedClass2 {
+            animation: rightMovingImage 1.5s forwards ease-out;
+        }
+
+        @keyframes rightMovingImage {
+            from {
+                left: -500px;
+            }
+
+            to {
+                left: 0;
+            }
+        }
+
+        @keyframes leftMovingImage {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: -500px;
+            }
+        }
+
+        .imagesDiv {
+            width: 520px;
+            height: fit-content;
+            border: 2px solid red;
+            overflow: hidden;
+        }
+
+        .imagesDiv div {
+            display: flex;
+            position: relative;
+            left: 0;
+            right: 0;
+            transition: left 0.5s ease-out;
+        }
+
+        .imagesDiv div img {
+            margin: 10px;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+    <div class="imagesDiv">
+        <div>
+            <!-- <div class="divWithImage"> -->
+            <img class="movingImg" src="image/country/bahamas.png" alt="" width="500">
+            <!-- </div> -->
+            <!-- <div class="divWithImage"> -->
+            <img class="movingImg" src="image/country/canada.png" alt="" width="500">
+            <!-- </div> -->
+            <!-- <div class="divWithImage"> -->
+            <img class="movingImg" src="image/country/bermuda.png" alt="" width="500">
+            <!-- </div> -->
+            <!-- <div class="divWithImage"> -->
+            <img class="movingImg" src="image/country/bermunda.png" alt="" width="500">
+            <!-- </div> -->
+            <!-- <div class="divWithImage"> -->
+            <img class="movingImg" src="image/country/caribbean.png" alt="" width="500">
+            <!-- </div> -->
+            <!-- <div class="divWithImage"> -->
+            <img class="movingImg" src="image/country/easterncaribbean.png" alt="" width="500">
+            <!-- </div> -->
+            <!-- <div class="divWithImage"> -->
+            <img class="movingImg" src="image/country/westerncaribbean.png" alt="" width="500">
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <!-- Uncomment this button and the Funncy code section in JS script tag to see MAGIC -->
+    <!-- <button id="moveLeftBtn" onclick="moveImgLeft()" style="position: relative; z-index: 999;" tabindex="-1">Move Left</button> -->
+
+    <!-- Comment this button if you ever decide to uncomment above button -->
+    <button onclick="moveImgLeft()">Move Left</button>
+
+
+    <button onclick="moveImgRigth()">Move Right</button>
+    <script>
+        //  let divs = document.getElementsByClassName("divWithImage");
+        // let moved = [];
+
+        // function MoveOrUnMoveImage(i) {
+        //     let img = document.getElementsByClassName("movingImg")[i];
+
+        //     if (moved[i]) {
+        //         img.classList.remove("animatedClass1");
+        //         img.classList.add("animatedClass2");
+        //         moved[i] = false;
+        //     }
+        //     else {
+        //         img.classList.add("animatedClass1");
+        //         img.classList.remove("animatedClass2");
+        //         moved[i] = true;
+        //     }
+        // }
+
+        // for (let i = 0; i < divs.length; i++) {
+        //     divs[i].addEventListener("click",
+        //         function (e) { MoveOrUnMoveImage(i); }
+        //     );
+        //     moved.push(false);
+        // }
+
+
+        let div = document.querySelector(".imagesDiv > div");
+        let notMoving = true;
+
+
+        function toggleNOTMOVING() {
+            notMoving = true;
+        }
+
+
+        div.addEventListener("click", function (e) {
+            var posLeft = parseInt(div.style.left);
+            if (isNaN(posLeft)) {
+                posLeft = 0;
+            }
+            var eq = div.querySelectorAll("img").length - 1;
+
+            if (notMoving) {
+                if (posLeft !== -(eq * 520)) {
+                    // posLeft = posLeft - 520;
+                    posLeft -= 520;
+                } else {
+                    posLeft = 0;
+                }
+
+
+                div.style.left = posLeft + "px";
+                notMoving = false;
+
+                setTimeout(toggleNOTMOVING, 500);
+            }
+
+        });
+
+
+        function moveImgLeft() {
+            var posLeft = parseInt(div.style.left);
+            if (isNaN(posLeft)) {
+                posLeft = 0;
+            }
+            var eq = div.querySelectorAll("img").length - 1;
+
+            if (notMoving) {
+                if (posLeft !== -eq * 520) {
+                    // posLeft = posLeft - 520;
+                    posLeft -= 520;
+                } else {
+                    posLeft = 0;
+                }
+
+
+                div.style.left = posLeft + "px";
+                notMoving = false;
+
+                setTimeout(toggleNOTMOVING, 500);
+            }
+        }
+
+        function moveImgRigth() {
+            var posLeft = parseInt(div.style.left);
+            if (isNaN(posLeft)) {
+                posLeft = 0;
+            }
+            var eq = div.querySelectorAll("img").length - 1;
+
+            if (notMoving) {
+                if (posLeft !== 0) {
+                    // posLeft = posLeft - 520;
+                    posLeft += 520;
+                } else {
+                    posLeft = -(eq * 520);
+                }
+
+
+                div.style.left = posLeft + "px";
+                notMoving = false;
+
+                setTimeout(toggleNOTMOVING, 500);
+            }
+
+        }
+
+
+        // // Funny Code
+
+        // let btn = document.getElementById("moveLeftBtn");
+
+
+        // btn.addEventListener("mouseenter", function(){
+
+            
+        //     left = (Math.random() * 800)
+
+        //     // 0..1
+        //     // 0*800 - 1 * 800
+        //     // 0 to 800
+        //     right = (Math.random() * 400)
+        //     // Range: 0 to 1
+        //     // Range: 0*800 to 1 * 800
+        //     // Range: 0 to 800
+        //     console.log(left + " " +  right);
+        //     btn.style.left = left + "px";
+        //     btn.style.top = right + "px";
+        // })
+
+
+
+    </script>
+</body>
+
+</html>
