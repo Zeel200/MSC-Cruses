@@ -13,10 +13,6 @@ This project is a comprehensive website for MSC Cruises, featuring detailed info
 
 - **Frontend**: HTML, CSS, JavaScript
 
-## 🚀 Usage
-
-- Open your browser and go to `http://127.0.0.1:5500/index.html` to explore the website.
-
 ## 🤝 Contributing
 
 Feel free to fork the repository and submit pull requests. All contributions are welcome!
